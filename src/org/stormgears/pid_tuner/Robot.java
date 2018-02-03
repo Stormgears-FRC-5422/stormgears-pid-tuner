@@ -2,6 +2,7 @@ package org.stormgears.pid_tuner;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 
+import edu.wpi.first.wpilibj.command.Scheduler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.ConfigurationFactory;
@@ -14,22 +15,17 @@ public class Robot extends IterativeRobot {
 	}
 
 	private static final Logger logger = LogManager.getLogger(Robot.class);
+	private PidTuner tuner = null;
 
 	/**
-	 * This function is run when the pid_tuner is first started up and should be
+	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code
 	 */
 	@Override
 	public void robotInit() {
+		logger.info("Starting PID Tuner!");
 
-	}
-
-	/**
-	 * Runs when autonomous mode starts
-	 */
-	@Override
-	public void autonomousInit() {
-
+		tuner = new PidTuner();
 	}
 
 	/**
@@ -37,15 +33,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopInit() {
-
-	}
-
-	/**
-	 * This function is called periodically during autonomous
-	 */
-	@Override
-	public void autonomousPeriodic() {
-
+		logger.info("Please open SmartDashboard to tune PID values.");
 	}
 
 	/**
@@ -53,22 +41,19 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
+		Scheduler.getInstance().run();
 
+		if (tuner != null) {
+			tuner.logData();
+		}
 	}
 
 	/**
-	 * This function is called periodically during test mode
+	 * This function is called whenever the robot is disabled.
 	 */
 	@Override
-	public void testPeriodic() {
-
-	}
-
-	/**
-	 * This function is called whenever the pid_tuner is disabled.
-	 */
 	public void disabledInit() {
-
+		logger.info("Robot disabled.");
 	}
 }
 

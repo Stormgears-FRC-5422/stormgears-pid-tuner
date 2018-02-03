@@ -1,0 +1,60 @@
+<xml version="1.0">
+<dashboard>
+	<widget field="Encoder Velocity" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.LinePlot">
+		<location x="26" y="394"/>
+	</widget>
+	<widget field="Start Motor" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="227" y="28"/>
+	</widget>
+	<widget field="Stop Motor" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="228" y="54"/>
+	</widget>
+	<widget field="Encoder Position" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="26" y="353"/>
+	</widget>
+	<widget field="Speed" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="5" y="145"/>
+	</widget>
+	<widget field="Info" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="282" y="259"/>
+		<width>322</width>
+	</widget>
+	<widget field="kF" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="27" y="89"/>
+	</widget>
+	<widget field="kIzone" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="115"/>
+	</widget>
+	<widget field="kD" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="24" y="62"/>
+	</widget>
+	<widget field="Talon ID" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="206" y="7"/>
+		<height>27</height>
+	</widget>
+	<widget field="kP" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="27" y="7"/>
+	</widget>
+	<widget field="kI" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="30" y="35"/>
+	</widget>
+</dashboard>
+<live-window>
+	<widget field="Ungrouped" type="LW Subsystem" class="edu.wpi.first.smartdashboard.livewindow.elements.LWSubsystem">
+		<widget field="Talon SRX [0]" type="Speed Controller" class="edu.wpi.first.smartdashboard.livewindow.elements.SpeedController">
+			<location x="6" y="18"/>
+			<height>52</height>
+			<width>323</width>
+		</widget>
+		<widget field="Talon SRX [7]" type="Speed Controller" class="edu.wpi.first.smartdashboard.livewindow.elements.SpeedController">
+			<location x="6" y="70"/>
+			<height>52</height>
+			<width>323</width>
+		</widget>
+		<location x="0" y="0"/>
+		<width>335</width>
+		<height>128</height>
+	</widget>
+</live-window>
+	<hidden field="Test"/>
+</xml>
