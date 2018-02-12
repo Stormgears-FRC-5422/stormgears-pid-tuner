@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.ConfigurationFactory;
+import org.stormgears.utils.StormTalon;
 import org.stormgears.utils.logging.Log4jConfigurationFactory;
 
 
